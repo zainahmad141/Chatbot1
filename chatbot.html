@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="chatbot.css" />
+</head>
+
+<body>
+
+    <div class="fcontainer">
+        <div class="box">
+            <div class="box1">
+                <div style="display: flex; justify-content:space-between; align-items: center;">
+                    <div>
+                        <button class="back">
+                            <img style="width:24px; height: 24px;" src="/assets/imgs/back.svg" />
+                        </button>
+                    </div>
+                    <div>
+                        <img style="width: 90px;height: 40px;" src="assets/imgs/580b57fcd9996e24bc43c535.png" alt="">
+                    </div>
+                    <div class="menu">
+                        <button id="dropdown-btn" onclick="ShowDropdown()"> <img style=" width: 30px; height: 40px; margin-right: 20px; "
+                                src="/assets/imgs/ham.svg" alt=""> </button>
+                        <ul id="dropdown-content">
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#">Info</a></li>
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#">Privacy</a></li>
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#">Mode</a></li>
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#">Channel</a></li>
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#">Settings</a></li>
+                            <li><a style="text-decoration: none; color: aliceblue;" href="#" onclick="logOut()"> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ol>
+                    <div id="chat-list">
+                    </div>
+                </ol>
+            </div>
+        </div>
+        <div id="logout-msg">
+            <h2>You are Logged Out</h2> 
+        </div>
+        
+        <div class="box2">
+            <div class="scrollable-container" id="msg-pane">
+
+            </div>
+            <div class="box3">
+                <input type="text" id="msg-input" class="send-msg-input" />
+                <button class="send-btn" onclick="sendMsg()"> <img src="assets/imgs/send-button.png" alt="" width="30px"
+                        height="28px"></button>
+            </div>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>
